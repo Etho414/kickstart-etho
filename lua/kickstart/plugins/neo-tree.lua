@@ -11,7 +11,7 @@ return {
   },
   cmd = 'Neotree',
   keys = {
-    { '\\', ':Neotree reveal<CR>', { desc = 'NeoTree reveal' } },
+    { '<leader>e', ':Neotree toggle<CR>', { desc = 'NeoTree reveal' } },
   },
   opts = {
     filesystem = {
@@ -22,4 +22,14 @@ return {
       },
     },
   },
+  config = function()
+    local function on_file_open()
+      vim.cmd ':Neotree close'
+    end
+
+    vim.api.nvim_create_autocmd('BufEnter', {
+      pattern = '*',
+      callback = on_file_open,
+    })
+  end,
 }
