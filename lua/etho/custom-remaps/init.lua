@@ -44,8 +44,6 @@ vim.keymap.set('n', '<leader>S', [[:%s/\<<C-r><C-w>\>//gI<Left><Left><Left>]])
 
 vim.keymap.set('n', '<leader>v', 'ggyG')
 
--- opens exploreer
-
 vim.keymap.set('n', '<leader>E', vim.cmd.Ex)
 
 --[[
@@ -74,7 +72,23 @@ _G.custom_keybinds_etho = {
   neo_tree = {
     toggle_tree = '<leader>e',
   },
-  toggle_term = [[<c-\>]],
+  terminal = {
+    toggle_term = '<c-\\>',
+  },
+
+  lsp = {
+    definitions = 'gd', -- Jump to the definition of the word under your cursor. To jump back, press <C-t>.
+    references = 'gr', -- Find references for the word under your cursor.
+    implementations = 'gI', -- Jump to the implementation of the word under your cursor.
+    type_definitions = '<leader>D', -- Jump to the type of the word under your cursor. Useful when you're not sure what type a variable is and you want to see the definition of its *type*, not where it was *defined*.
+    document_symbols = '<leader>ds', -- Fuzzy find all the symbols in your current document.
+    dynamic_workspace_symbols = '<leader>ws', -- Fuzzy find all the symbols in your current workspace. Similar to document symbols, except searches over your entire project.
+    buf_rename = '<leader>rn', -- Rename the variable under your cursor.
+    buf_code_action = '<leader>ca', -- Execute a code action, usually your cursor needs to be on top of an error or a suggestion from your LSP for this to activate.
+    hover_doc = 'K', --  See `:help K` for why this keymap.
+    goto_declaration = 'gD', -- WARN: This is not Goto Definition, this is Goto Declaration. For example, in C this would take you to the header.
+    toggle_inlay_hints = '<leader>th', -- [T]oggle Inlay [H]ints
+  },
 }
 --[[
 
@@ -90,4 +104,3 @@ remaps set in other files / plugin configs that were custom (Not part of kicksta
 	
 
 --]]
-return custom_keybinds_etho
