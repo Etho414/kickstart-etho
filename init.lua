@@ -19,8 +19,7 @@ require('lazy').setup({
   { 'numToStr/Comment.nvim', opts = {} },
 
   -- Highlight todo, notes, etc in comments
-  require 'etho.lazy-plugins.autocomplete'
- { -- Highlight, edit, and navigate code
+  require 'etho.lazy-plugins.autocomplete' { -- Highlight, edit, and navigate code
     'nvim-treesitter/nvim-treesitter',
     build = ':TSUpdate',
     opts = {

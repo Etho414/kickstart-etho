@@ -92,6 +92,16 @@ _G.custom_keybinds_etho = {
   conform = {
     format_buffer = '<leader>f',
   },
+
+  autocomplete = {
+    select_next_item = '<C-n>',
+    select_previous_item = '<C-p>',
+    select_confirm_item = '<C-y>',
+    scroll_doc_f = '<C-f>',
+    scroll_doc_b = '<C-b>',
+    luasnip_expand = '<C-l>',
+    luasnip_back = '<C-h>',
+  },
 }
 --[[
 
