@@ -64,7 +64,7 @@ vim.keymap.set('n', '<leader>E', vim.cmd.Ex)
 --
 --]]
 
-_G.custom_keybinds = {
+_G.custom_keybinds_etho = {
   telescope = {
     help_tag = '<leader>sh',
     keymaps = '<leader>sk',
@@ -96,4 +96,4 @@ remaps set in other files / plugin configs that were custom (Not part of kicksta
 	
 
 --]]
-return custom_keybinds
+return custom_keybinds_etho
