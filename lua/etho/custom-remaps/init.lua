@@ -39,7 +39,9 @@ vim.keymap.set('x', '<leader>p', '"_dP')
 
 -- Does search and replace on current word
 vim.keymap.set('n', '<leader>S', [[:%s/\<<C-r><C-w>\>//gI<Left><Left><Left>]])
+-- Does search on current word
 
+vim.keymap.set('n', '<C-_>', [[/<C-r><C-w><CR>]], { noremap = true, silent = true })
 -- copy whole file
 
 vim.keymap.set('n', '<leader>v', 'ggyG')
