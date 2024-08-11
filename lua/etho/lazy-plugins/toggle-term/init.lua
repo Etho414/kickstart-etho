@@ -1,3 +1,4 @@
+local keybind_dict = require 'etho.custom-remaps'
 return {
 
   {
@@ -6,7 +7,7 @@ return {
     opts = {--[[ things you want to change go here]]
 
       size = 16,
-      open_mapping = [[<c-\>]],
+      open_mapping = keybind_dict.toggle_term,
       shade_terminals = true,
     },
   }, -- Terminal Plugin
