@@ -56,4 +56,9 @@ remaps set in other files / plugin configs that were custom (Not part of kicksta
 
 	<CONTROL> \ Opens terminal window
 
+	<CONTROL>n Next autocomplete
+	<CONTROL>p Previous autocomplete
+	<CONTROL>y Accept autocomplete
+	
+
 --]]
