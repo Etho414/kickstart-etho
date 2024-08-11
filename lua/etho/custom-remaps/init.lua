@@ -89,6 +89,9 @@ _G.custom_keybinds_etho = {
     goto_declaration = 'gD', -- WARN: This is not Goto Definition, this is Goto Declaration. For example, in C this would take you to the header.
     toggle_inlay_hints = '<leader>th', -- [T]oggle Inlay [H]ints
   },
+  conform = {
+    format_buffer = '<leader>f',
+  },
 }
 --[[
 
