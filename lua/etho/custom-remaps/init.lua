@@ -64,7 +64,7 @@ vim.keymap.set('n', '<leader>E', vim.cmd.Ex)
 --
 --]]
 
-custom_keybinds = {
+_G.custom_keybinds = {
   telescope = {
     help_tag = '<leader>sh',
     keymaps = '<leader>sk',
