@@ -40,13 +40,28 @@ vim.keymap.set('x', '<leader>p', '"_dP')
 -- Does search and replace on current word
 vim.keymap.set('n', '<leader>S', [[:%s/\<<C-r><C-w>\>//gI<Left><Left><Left>]])
 -- Does search on current word
-
-vim.keymap.set('n', '<C-_>', [[/<C-r><C-w><CR>]], { noremap = true, silent = true })
+-- Use * instead (Did not knwo this was a thing!)
+-- vim.keymap.set('n', '<C-_>', [[/<C-r><C-w><CR>]], { noremap = true, silent = true })
 -- copy whole file
 
 vim.keymap.set('n', '<leader>v', 'ggyG')
 
 vim.keymap.set('n', '<leader>E', vim.cmd.Ex)
+
+-- Open compiler
+vim.api.nvim_set_keymap('n', '<F6>', '<cmd>CompilerOpen<cr>', { noremap = true, silent = true })
+
+-- Redo last selected option
+vim.api.nvim_set_keymap(
+  'n',
+  '<S-F6>',
+  '<cmd>CompilerStop<cr>' -- (Optional, to dispose all tasks before redo)
+    .. '<cmd>CompilerRedo<cr>',
+  { noremap = true, silent = true }
+)
+
+-- Toggle compiler results
+vim.api.nvim_set_keymap('n', '<S-F7>', '<cmd>CompilerToggleResults<cr>', { noremap = true, silent = true })
 
 --[[
 
