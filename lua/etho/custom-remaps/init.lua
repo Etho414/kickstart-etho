@@ -89,7 +89,7 @@ _G.custom_keybinds_etho = {
   },
   neo_tree = {
     toggle_tree = '<leader>e',
-    vertical_split = '<C-v>',
+    vertical_split = '<C-z>',
   },
   terminal = {
     toggle_term = '<c-\\>',
@@ -122,17 +122,3 @@ _G.custom_keybinds_etho = {
     luasnip_back = '<C-h>',
   },
 }
---[[
-
-remaps set in other files / plugin configs that were custom (Not part of kickstart)
-
-	<leader>e Opens Neo-Tree 
-
-	<CONTROL> \ Opens terminal window
-
-	<CONTROL>n Next autocomplete
-	<CONTROL>p Previous autocomplete
-	<CONTROL>y Accept autocomplete
-	
-
---]]
