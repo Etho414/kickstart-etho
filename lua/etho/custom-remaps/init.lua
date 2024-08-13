@@ -17,6 +17,7 @@ vim.api.nvim_set_keymap('n', '<Up>', '<C-w>k', base_opt)
 vim.api.nvim_set_keymap('n', '<Down>', '<C-w>j', base_opt)
 vim.api.nvim_set_keymap('n', '<Left>', '<C-w>h', base_opt)
 vim.api.nvim_set_keymap('n', '<Right>', '<C-w>l', base_opt)
+
 -- vim.keymap.set('n', '<C-h>', '<C-w><C-h>', { desc = 'Move focus to the left window' })
 -- vim.keymap.set('n', '<C-l>', '<C-w><C-l>', { desc = 'Move focus to the right window' })
 -- vim.keymap.set('n', '<C-j>', '<C-w><C-j>', { desc = 'Move focus to the lower window' })
@@ -58,13 +59,7 @@ vim.keymap.set('n', '<leader>E', vim.cmd.Ex)
 vim.api.nvim_set_keymap('n', '<F6>', '<cmd>CompilerOpen<cr>', { noremap = true, silent = true })
 
 -- Redo last selected option
-vim.api.nvim_set_keymap(
-  'n',
-  '<S-F6>',
-  '<cmd>CompilerStop<cr>' -- (Optional, to dispose all tasks before redo)
-    .. '<cmd>CompilerRedo<cr>',
-  { noremap = true, silent = true }
-)
+vim.api.nvim_set_keymap('n', '<S-F6>', '<cmd>CompilerStop<cr>' .. '<cmd>CompilerRedo<cr>', base_opt)
 
 -- Toggle compiler results
 vim.api.nvim_set_keymap('n', '<S-F7>', '<cmd>CompilerToggleResults<cr>', { noremap = true, silent = true })
@@ -94,6 +89,7 @@ _G.custom_keybinds_etho = {
   },
   neo_tree = {
     toggle_tree = '<leader>e',
+    vertical_split = '<C-v>',
   },
   terminal = {
     toggle_term = '<c-\\>',
