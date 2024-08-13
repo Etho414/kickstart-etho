@@ -11,6 +11,12 @@ vim.keymap.set('n', ']d', vim.diagnostic.goto_next, { desc = 'Go to next [D]iagn
 vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagnostic [Q]uickfix list' })
 vim.keymap.set('t', '<Esc><Esc>', '<C-\\><C-n>', { desc = 'Exit terminal mode' })
 
+-- Keybinds for moving to differnt split windows with arrow keys
+local base_opt = { noremap = true, silent = true }
+vim.api.nvim_set_keymap('n', '<Up>', '<C-w>k', base_opt)
+vim.api.nvim_set_keymap('n', '<Down>', '<C-w>j', base_opt)
+vim.api.nvim_set_keymap('n', '<Left>', '<C-w>h', base_opt)
+vim.api.nvim_set_keymap('n', '<Right>', '<C-w>l', base_opt)
 -- vim.keymap.set('n', '<C-h>', '<C-w><C-h>', { desc = 'Move focus to the left window' })
 -- vim.keymap.set('n', '<C-l>', '<C-w><C-l>', { desc = 'Move focus to the right window' })
 -- vim.keymap.set('n', '<C-j>', '<C-w><C-j>', { desc = 'Move focus to the lower window' })

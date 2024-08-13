@@ -31,6 +31,7 @@ require('lazy').setup({
   require 'etho.lazy-plugins.telescope',
   require 'etho.lazy-plugins.lsp',
   require 'etho.lazy-plugins.conform',
+  require 'etho.lazy-plugins.compiler-nvim',
 
   -- require 'kickstart.plugins.debug',
   -- require 'kickstart.plugins.indent_line',
